@@ -4,7 +4,7 @@
 
 #pragma once
 #include "Stack.h"
-#include "LinkedList.h"
+#include "List.h"
 
 template <typename T>
 class StacksList : public Stack<T> {

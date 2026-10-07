@@ -4,8 +4,8 @@
 
 // STEP 3 and STEP 5 of the lab guide: uncomment these two includes
 // once the files exist.
-// #include "StackList.h"
-// #include "QueueList.h"
+#include "StacksList.h"
+#include "QueueList.h"
 
 int main() {
     // ---- Part 0: the List you already know, plus the new methods. ----
@@ -22,9 +22,9 @@ int main() {
     list->print();                                           // 20,30,
 
     // ---- Part 1: StackList. Uncomment after STEP 3. ----
-    /*
+
     std::cout << std::endl << "== Stack<int> ==" << std::endl;
-    StackList<int> stack;
+    StacksList<int> stack;
     stack.push(new int(1));
     stack.push(new int(2));
     stack.push(new int(3));
@@ -35,7 +35,7 @@ int main() {
     std::cout << "size: " << stack.size() << std::endl;      // 2
 
     std::cout << std::endl << "== Stack<Data> ==" << std::endl;
-    StackList<Data> dataStack;
+    StacksList<Data> dataStack;
     dataStack.push(new Data(1, "Alice"));
     dataStack.push(new Data(2, "Bilal"));
     dataStack.push(new Data(3, "Chen"));
@@ -44,13 +44,12 @@ int main() {
     std::cout << "peek: " << *dataStack.peek() << std::endl; // 2 Bilal
 
     std::cout << std::endl << "== Empty stack ==" << std::endl;
-    StackList<int> emptyStack;
+    StacksList<int> emptyStack;
     emptyStack.pop();                                        // LinkedList is empty.
     std::cout << "isEmpty: " << emptyStack.isEmpty() << std::endl; // 1
-    */
 
     // ---- Part 2: QueueList. Uncomment after STEP 5. ----
-    /*
+
     std::cout << std::endl << "== Queue<int> ==" << std::endl;
     QueueList<int> queue;
     queue.enqueue(new int(1));
@@ -78,7 +77,7 @@ int main() {
     std::cout << "isEmpty: " << queue.isEmpty() << std::endl; // 1
     queue.enqueue(new int(99));
     queue.print();                                           // 99,
-    */
+
 
     return 0;
 }
