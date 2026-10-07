@@ -9,7 +9,7 @@ template <typename T>
 class QueueList : public Queue<T> {
 public:
     void enqueue(T* value) override {
-        return list_.addFront(value);
+        return list_.addBack(value);
     }
     void dequeue() override {
         return list_.deleteFront();
