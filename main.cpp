@@ -1,6 +1,7 @@
 #include <iostream>
 #include "List.h"
 #include "Data.h"
+#include "Process.h"
 
 // STEP 3 and STEP 5 of the lab guide: uncomment these two includes
 // once the files exist.
@@ -8,7 +9,7 @@
 #include "QueueList.h"
 
 int main() {
-    // ---- Part 0: the List you already know, plus the new methods. ----
+    /*// ---- Part 0: the List you already know, plus the new methods. ----
     // This part runs right now. Build and run it before you write anything.
     std::cout << "== List<int> ==" << std::endl;
     std::unique_ptr<List<int>> list = makeList<int>();
@@ -76,7 +77,39 @@ int main() {
     queue.dequeue();
     std::cout << "isEmpty: " << queue.isEmpty() << std::endl; // 1
     queue.enqueue(new int(99));
-    queue.print();                                           // 99,
+    queue.print();*/                                           // 99,
+
+    // PARTICIPATION
+    //STACK PROCESS
+
+    StacksList<Process> processStack;
+    std::cout << "isEmpty: " << processStack.isEmpty() << std::endl;   // 1
+    processStack.push(new Process(101, "Nascar", "Fast race"));
+    processStack.push(new Process(102, "Chrome", "Web browser"));
+    processStack.print();                                    // 102, 101
+    processStack.peek()->print();                            // 102
+    std::cout << "size: " << processStack.size() << std::endl;         // 2
+    processStack.pop();
+    processStack.print(); // 101
+    std:: cout << "-------------------------------" << std::endl;
+
+    StacksList<int> emptyStack;
+    emptyStack.pop();                                        // LinkedList is empty.
+    std::cout << "isEmpty: " << emptyStack.isEmpty() << std::endl;     // 1
+
+    std:: cout <<"--------------------------" << std::endl;
+
+
+    //QUEUE PROCESS
+    QueueList<Process> processQueue;
+    std::cout << "isEmpty: " << processQueue.isEmpty() << std::endl;   // 1
+    processQueue.enqueue(new Process(201, "Word", "Word processor"));
+    processQueue.enqueue(new Process(202, "Excel", "Spreadsheet"));
+    processQueue.print();                                    // 201, 202
+    processQueue.front()->print();                           // 201
+    std::cout << "size: " << processQueue.size() << std::endl;         // 2
+    processQueue.dequeue();
+    processQueue.print();                                    // 202
 
 
     return 0;
